@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\fixture;
 
+use App\Mail\FixtureCreated;
+
 use Illuminate\Http\Request;
 
 class fixturesController extends Controller
@@ -52,7 +54,11 @@ class fixturesController extends Controller
         
         $fixture = Fixture::create($attributes);
         
+        \Mail::to('joecummins5@hotmail.com')->send(
         
+            new FixtureCreated($fixture)
+        
+        );
         
         
         return redirect('/fixtures');
