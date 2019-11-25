@@ -10,6 +10,9 @@ class fixture extends Model
     
     protected $guarded = [];
 
+
+    
+    
     public function players()
 
     {

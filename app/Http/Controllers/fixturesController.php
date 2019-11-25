@@ -50,7 +50,10 @@ class fixturesController extends Controller
         
         $attributes['owner_id'] = auth()->id();
         
-        Fixture::create($attributes);
+        $fixture = Fixture::create($attributes);
+        
+        
+        
         
         return redirect('/fixtures');
     
