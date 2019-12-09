@@ -43,6 +43,8 @@
        <li><a href="/notification">Membership</a></li>
        
        <li><a href="/create">Create a Session</a></li>
+       
+       <li><a href="/experience">Experience</a></li>
     
     </ul>
     

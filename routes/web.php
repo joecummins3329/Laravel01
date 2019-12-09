@@ -8,6 +8,8 @@ Route::get('/contact', 'PagesController@contact');
 
 Route::resource('fixtures','fixturesController');
 
+Route::resource('experience', 'ExperienceController');
+
 /*
 
 Route::get('/fixtures', 'fixturesController@index');

@@ -1,8 +1,8 @@
 @component('mail::message')
 
-# New Fixture: {{ $fixture->title }}
+Fixture: {{ $fixture->title }}
 
-{{ $fixture->description }}
+Description: {{ $fixture->description }}
 
 
 

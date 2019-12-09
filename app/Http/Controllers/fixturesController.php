@@ -54,7 +54,7 @@ class fixturesController extends Controller
         
         $fixture = Fixture::create($attributes);
         
-        event(new FixturePublished($fixture));
+      // event(new FixturePublished($fixture));
 
         return redirect('/fixtures');
     
