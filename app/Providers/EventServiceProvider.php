@@ -2,8 +2,18 @@
 
 namespace App\Providers;
 
+use App\Events\FixturePublished;
+
 use Illuminate\Support\Facades\Event;
+
+use Illuminate\Auth\Events\Registered;
+
+use App\Listeners\SendFixturePublishedNotification;
+
+use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
+
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -13,8 +23,14 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
+       // Registered::class => [
+       //     SendEmailVerificationNotification::class,
+       //],
+        
+        FixturePublished::class => [
+        
+            SendFixturePublishedNotification::class,
+        
         ],
     ];
 

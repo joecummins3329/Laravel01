@@ -29,5 +29,9 @@
     </ul>
 
     <a href="/fixtures/create">New Fixture</a>
+    
+    
+        
+  
 
 @endsection
