@@ -29,7 +29,7 @@ class EventServiceProvider extends ServiceProvider
         
         FixturePublished::class => [
         
-            SendFixturePublishedNotification::class,
+        SendFixturePublishedNotification::class,
         
         ],
     ];

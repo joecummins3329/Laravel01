@@ -57,3 +57,5 @@ Route::post('session', function() {
     return redirect('session');
 
 });
+
+Route::get('documents/{document}','DocumentsController@show');

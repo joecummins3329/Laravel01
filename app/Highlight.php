@@ -4,17 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Experience extends Model
+class Highlight extends Model
 {
     
-    public function user()
+    public function gametape()
     
     {
         
-       $this->belongsTo(User::class); 
+       return $this->belongsTo(Gametape::class); 
         
     }
-    
-    
     
 }

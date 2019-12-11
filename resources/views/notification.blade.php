@@ -5,6 +5,6 @@
 
 <h1>Membership</h1>
 
-<p>Information about membership has been sent to: {{ auth()->user()->username }} </p>
+<p>Information about membership has been sent to: {{ auth()->user()->email }} </p>
 
 @endsection

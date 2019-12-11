@@ -3,6 +3,8 @@
 
 @section('content')
 
+     
+    
     <h1>{{ $fixture->title }}</h1>
     
     <div>{{ $fixture->description }}</div>
@@ -86,6 +88,15 @@
     
     </form>
     
+    <ul>
+   
+        @foreach ($fixture->adjustments as $user)
+    
+        <li> {{ $user->email }} modified {{ $user->pivot->updated_at->diffForHumans() }} changed {{ $user->pivot->before }} to {{ $user->pivot->after }}</li>
+        
+        @endforeach
+        
+   </ul>
     
  
     
